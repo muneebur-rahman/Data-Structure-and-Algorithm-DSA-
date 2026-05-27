@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+//T: O(n)
+//S: O(1)
+
 class LeetCode344{
 
     public void reverseString(char[] s) {
