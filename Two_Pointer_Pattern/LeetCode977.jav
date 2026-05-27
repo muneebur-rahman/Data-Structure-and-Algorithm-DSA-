@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+ // T: O(n)
+// S: O(1)
+
 class LeetCode977 {
 
     public int[] sortedSquares(int[] nums) {
