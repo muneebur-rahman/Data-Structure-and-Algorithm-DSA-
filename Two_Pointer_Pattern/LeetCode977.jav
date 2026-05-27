@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
  // T: O(n)
-// S: O(1)
+//  S: O(1)
 
 class LeetCode977 {
 

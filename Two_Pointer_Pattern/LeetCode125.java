@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-// T: O(n), S: O(1)
+// T: O(n)
+// S: O(1)
 class LeetCode125 {
 
     public boolean isPalindrome(String s) {
