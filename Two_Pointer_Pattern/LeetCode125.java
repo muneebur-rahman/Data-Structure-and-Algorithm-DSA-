@@ -1,34 +1,54 @@
 import java.util.Scanner;
 
-public class LeetCode125 {
-    public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        String s;
-        s=sc.nextLine();
+class LeetCode125 {
 
-        int i=0,j=s.length()-1;
+    public boolean isPalindrome(String s) {
+        int i = 0;
+        int j = s.length() - 1;
 
-        while(i<j){
-            char right=s.charAt(i);
-            char left=s.charAt(j);
+        while (i < j) {
 
-            if(!Character.isLetterOrDigit(right)){
-                i+=1;
+            char left = s.charAt(i);
+            char right = s.charAt(j);
+
+            // Ignore non-alphanumeric characters from left side
+            if (!Character.isLetterOrDigit(left)) {
+                i++;
                 continue;
             }
 
-            if(!Character.isLetterOrDigit(left)){
-                left-=1;
+            // Ignore non-alphanumeric characters from right side
+            if (!Character.isLetterOrDigit(right)) {
+                j--;
                 continue;
             }
 
-            if(Character.toLowerCase(right)!=Character.toLowerCase(left)){
-                System.out.println("Not Palindrome");
+            // Compare characters ignoring case
+            if (Character.toLowerCase(left) != Character.toLowerCase(right)) {
+                return false;
             }
+
             i++;
             j--;
         }
-        System.out.println("Palindrome");
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        LeetCode125 obj = new LeetCode125();
+
+        if (obj.isPalindrome(str)) {
+            System.out.println("The string is a Palindrome");
+        } else {
+            System.out.println("The string is NOT a Palindrome");
+        }
 
         sc.close();
     }
