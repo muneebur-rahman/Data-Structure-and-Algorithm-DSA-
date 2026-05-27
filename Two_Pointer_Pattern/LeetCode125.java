@@ -45,9 +45,9 @@ class LeetCode125 {
         LeetCode125 obj = new LeetCode125();
 
         if (obj.isPalindrome(str)) {
-            System.out.println("The string is a Palindrome");
+            System.out.println("The string "+str+" is a Palindrome");
         } else {
-            System.out.println("The string is NOT a Palindrome");
+            System.out.println("The string "+str+" is NOT a Palindrome");
         }
 
         sc.close();
